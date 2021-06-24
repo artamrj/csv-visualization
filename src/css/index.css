@@ -1,0 +1,180 @@
+.main-screen {
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
+.btn-c {
+  margin: 20px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  padding-right: 2px;
+  font-size: 1.4em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primry {
+  background-color: #009f3b;
+  color: #FFFFFF;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.btn-primry:hover {
+  background-color: #009f3b;
+}
+
+.btn-primry:active {
+  background-color: #009f3b;
+  color: #000000;
+}
+
+.drag-drop-body {
+  text-align: center;
+  padding: 180px 20px 180px 20px;
+  margin: 20px;
+  border: 2px dashed #dadada;
+  border-radius: 5px;
+}
+
+.img-drag-drop {
+  pointer-events: none;
+}
+
+.txt-drag-drop {
+  font-size: 17px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.uploaded-csv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 10px 10px 10px;
+}
+
+.uploaded-csv img {
+  margin-right: 10px;
+}
+
+.uploaded-csv button {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.control-csv {
+  background-color: #5e60ce25;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 13px 10px 15px 10px;
+}
+
+.control-csv #fa-csv {
+  color: #5e60ce;
+  font-size: 42px;
+}
+
+.control-csv #csv-file-name {
+  color: #5e60ce;
+  font-weight: 500;
+  margin-left: -5px;
+  padding-top: 15px;
+  font-size: small;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-remove {
+  background-color: #ffffff63;
+  color: #5e60ce;
+  padding: 5px;
+  width: 100%;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.btn-remove:hover {
+  background-color: #ffffffcb;
+}
+
+.btn-remove:active {
+  background-color: #dd3b3b5d;
+  color: #000000;
+}
+
+.num-crad-top {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .num-crad-top {
+    text-align: end;
+    font-weight: bold;
+    margin-top: 18px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1410px) {
+  .num-crad-top {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1410px) {
+  #students {
+    text-align: center;
+  }
+}
+
+.title-card-top {
+  margin-top: 18px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+  .title-card-top {
+    margin-top: 20px;
+    font-size: 15.50px;
+  }
+}
+
+@media (min-width: 1410px) {
+  .title-card-top {
+    font-size: 20px;
+    margin-top: 18px;
+  }
+}
+
+.show-date {
+  background-color: #ffffff49;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  font-weight: 500;
+  margin: 0px 5px 0px 5px;
+}
+/*# sourceMappingURL=index.css.map */

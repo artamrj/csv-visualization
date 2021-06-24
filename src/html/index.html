@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+  <link rel="stylesheet" href="../css/index.css">
+
+
+  <link href="../../assets/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+  <div id="section-part" class="container mt-4">
+    <section id="upload">
+      <div class="card shadow border-0">
+        <div id="drag-drop-box" class="drag-drop-body">
+          <img class="img-drag-drop" src="../../assets/img/cloud-computing.png" alt="droped-upload">
+          <h2 class="txt-drag-drop">Ziehen Sie Ihre CSV-Datei hierher und legen Sie sie dort ab!</h2>
+          <p>oder</p>
+          <button id="btn-get-file" class="btn btn-success">Datei durchsuchen</button>
+        </div>
+      </div>
+    </section>
+    <section class="mt-4">
+      <ul class="list-group" id="list-csv"></ul>
+    </section>
+
+    <div class="row mt-4">
+      <div class="col-8">
+        <button id="b-visualizing" class="btn btn-success w-100" type="button" hidden>beginnen zu visualisieren!</button>
+      </div>
+      <div class="col-4">
+        <button id="btn-reload" class="btn btn-danger w-100" type="button" hidden>Löschen</button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div id="section-part" hidden>
+
+    <div id="btn-back" class="btn-c shadow"><i class="fas fa-chevron-left"></i></div>
+
+
+    <div id="dashboard" class="main-screen">
+
+      <div class="container">
+
+        <div class="alert alert-success mb-0 shadow-sm border-0 rounded-3" role="alert">
+          <i class="fas fa-calendar-alt"></i>
+          seit <span id="start-date" class="show-date"></span> bis <span id="end-date" class="show-date"></span>
+        </div>
+
+        <div class="row">
+          <div class="col">
+
+            <div class="card mt-3 border-0 shadow-sm rounded-3">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+                    <i class="fas fa-wallet"
+                      style="background-color: rgba(134, 76, 10, 0.185); color: rgb(189, 111, 9); padding: 15px; border-radius: 10px; font-size: 65px;"></i>
+                  </div>
+                  <div class="col-md-8 col-lg-8 col-xl-4 col-xxl">
+                    <div id="income" class="num-crad-top" style="color: rgb(189, 111, 9);">85000 €</div>
+                  </div>
+                  <div class="col-md col-lg col-xl-5 col-xxl">
+                    <div class="title-card-top" style="color: rgb(189, 111, 9);">Gehalt</div>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col">
+
+            <div class="card mt-3 border-0 shadow-sm rounded-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+                    <i class="fas fa-hashtag"
+                      style="background-color: rgba(255, 43, 43, 0.185); color: rgb(209, 56, 56); padding: 15px; border-radius: 10px; font-size: 65px;"></i>
+                  </div>
+                  <div class="col-md-8 col-lg-8 col-xl-4 col-xxl">
+                    <div id="products" class="num-crad-top"
+                      style="color: rgb(209, 56, 56); text-align: center !important;">10</div>
+                  </div>
+                  <div class="col-md col-lg col-xl-5 col-xxl">
+                    <div id="products-title" class="title-card-top" style="color: rgb(209, 56, 56);">Products</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col">
+
+            <div class="card mt-3 border-0 shadow-sm rounded-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-5 col-lg-5 col-xl-3 col-xxl">
+                    <i class="fas fa-graduation-cap"
+                      style="background-color: rgba(95, 156, 247, 0.185); color: rgb(16, 40, 255); padding: 13px; border-radius: 10px; font-size: 65px;"></i>
+                  </div>
+                  <div class="col-md-7 col-lg-7 col-xl-4 col-xxl">
+                    <div id="students" class="num-crad-top" style="color: rgb(16, 40, 255);">99999</div>
+                  </div>
+                  <div class="col-md col-lg col-xl-4 col-xxl">
+                    <div class="title-card-top" style="color: rgb(16, 40, 255);">Students</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mt-4">
+
+          <div class="col">
+
+            <div class="card border-0 shadow-sm rounded-3">
+              <div class="card-body">
+
+
+                <div id="area-chart"></div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-7">
+
+            <div class="card border-0 shadow-sm rounded-3">
+              <div class="card-body">
+
+
+                <div id="bar-chart"></div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-5">
+
+            <div class="card border-0 shadow-sm rounded-3">
+              <div class="card-body">
+
+                <div id="pie-chart"></div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript">
+    require('../js/render.js')
+    require('../../node_modules/@fortawesome/fontawesome-free/js/brands.js')
+    require('../../node_modules/@fortawesome/fontawesome-free/js/solid.js')
+    require('../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js')
+  </script>
+
+
+
+</body>
+
+</html>
